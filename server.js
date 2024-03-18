@@ -1,5 +1,7 @@
 // Dependencies
 const express = require('express');
+const path = require('path');
+
 
 // Asks the app to use Express.js and creates the variable port that the server runs on
 const app = express();
@@ -15,6 +17,11 @@ app.use(express.json());
 // serves the main HTML page of the app
 app.get('/', (req, res) =>
     res.sendFile(path.join(__dirname, '/public/index.html'))
+);
+
+// serves the notes page
+app.get('/notes', (req, res) =>
+    res.sendFile(path.join(__dirname, 'public/notes.html'))
 );
 
 // app listener, to start the server on the specified PORT
