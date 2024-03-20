@@ -17,11 +17,6 @@ app.get('/', (req, res) =>
     res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
-// serves the notes page
-app.get('/notes', (req, res) =>
-    res.sendFile(path.join(__dirname, 'public/notes.html'))
-);
-
 // Encapsulates and handles logic from api and allows the files to interact with the app
 require('./routes/apiRoutes')(app);
 
