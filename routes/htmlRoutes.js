@@ -9,8 +9,8 @@ module.exports = (app) => {
         res.sendFile(path.join(__dirname, '../public/notes.html'));
     });
 
-    // returns index.html
-    app.get('*', (req, res) => {
+    // serves the main HTML page of the app
+    app.get('/', (req, res) => {
         res.sendFile(path.join(__dirname, '../public/index.html'));
     });
 };
