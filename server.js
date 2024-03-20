@@ -1,7 +1,5 @@
 // Dependencies
 const express = require('express');
-const path = require('path');
-
 
 // Asks the app to use Express.js and creates the variable port that the server runs on
 const app = express();
