@@ -39,15 +39,16 @@ module.exports = (app) => {
     app.delete('/api/notes/:id', (req, res) => {
 
         // Reads all notes from the db.json file
-        let db = JSON.parse(fs.readFileSync('db/db.json'))
+        let db = JSON.parse(fs.readFileSync('db/db.json'));
 
         // Removes the note with the given id property
-        let deleteNote = db.filter(item => item.id !== req.params.id);
+        let deleteNote = db.filter(item => item.id !== parseInt(req.params.id));
+        // let deleteNote = db.filter(item => item.id !== req.params.id);
 
         // Rewrites the notes to the db.json file
         fs.writeFileSync('db/db/json', JSON.stringify(deleteNote));
         res.json(deleteNote);
 
-    })
+    });
 
 };
