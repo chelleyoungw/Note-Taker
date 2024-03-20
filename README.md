@@ -9,16 +9,22 @@ The following image shows the web application's appearance. You can also go to t
 ![The Note Taker App includes DESCRIBE THE APP PAGE.](./assets/images/INSERT-PIC-FILE-NAME-HERE.png)
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+Clone the project. Type in the following commands into your terminal:
+- npm install
+- npm start
+
+You should now be able to run your app through Insomnia or another similar app.
 
 ## Usage
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
 ## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+- Chelle Wood: student at edx Coding Bootcamp
+- Express.js: back end web app framework building
+- Bootstrap: sylizing
+- uniqid npm: to create a unique id for all note html
+- Heroku: cloud platform service to run the app
+- Xpert Learning Assistant: general troubleshooting, bug fixing, and general understanding of each line of code
 
 ## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Refer to MIT license on Repo

@@ -13,7 +13,7 @@ module.exports = (app) => {
         res.sendFile(path.join(__dirname, '../db/db.json'));
     });
     
-    // takes a new note, saves, then returns a new one
+    // takes a new note to save on the request body
     app.post('/api/notes', (req, res) => {
         let db = fs.readFileSync('db/db.json');
         db = JSON.parse(db);
@@ -26,7 +26,8 @@ module.exports = (app) => {
             id:uniqid(),
         };
 
-        // sends note to db.json file
+        // saves note to db.json file, then returnes note to
+        // client
         db.push(userNote);
         fs.writeFileSync('db/db.json', JSON.stringify(db));
         res.json(db);

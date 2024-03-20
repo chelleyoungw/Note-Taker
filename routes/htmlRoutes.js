@@ -10,7 +10,7 @@ module.exports = (app) => {
     });
 
     // serves the main HTML page of the app
-    app.get('/', (req, res) => {
+    app.get('*', (req, res) => {
         res.sendFile(path.join(__dirname, '../public/index.html'));
     });
 };
