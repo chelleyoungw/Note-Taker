@@ -24,6 +24,12 @@ app.get('/notes', (req, res) =>
     res.sendFile(path.join(__dirname, 'public/notes.html'))
 );
 
+// Encapsulates and handles logic from api and allows the files to interact with the app
+require('./routes/apiRoutes')(app);
+
+// Handles GET request to return the notes.html file
+require('./routes/htmlRoutes')(app);
+
 // app listener, to start the server on the specified PORT
 app.listen(PORT, () => {
     console.log('App listening at http://localhost:${PORT}')
