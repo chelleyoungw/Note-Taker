@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 // npm pkg that allows unique ids for notes to be created to save them individually
-var uniqueId = require('uniqId');
+var uniqid = require('uniqid');
 
 // Routing
 module.exports = (app) => {
@@ -23,7 +23,7 @@ module.exports = (app) => {
         let userNote = {
             title: req.body.title,
             text: req.body.text,
-            id:uniqueId(),
+            id:uniqid(),
         };
 
         // sends note to db.json file
