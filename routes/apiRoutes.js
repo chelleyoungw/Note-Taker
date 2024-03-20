@@ -41,12 +41,11 @@ module.exports = (app) => {
         // Reads all notes from the db.json file
         let db = JSON.parse(fs.readFileSync('db/db.json'));
 
-        // Removes the note with the given id property
-        let deleteNote = db.filter(item => item.id !== parseInt(req.params.id));
-        // let deleteNote = db.filter(item => item.id !== req.params.id);
+        // Removes the note with the given id property (only use 45 or 46)
+        let deleteNote = db.filter(item => item.id !== req.params.id);
 
         // Rewrites the notes to the db.json file
-        fs.writeFileSync('db/db/json', JSON.stringify(deleteNote));
+        fs.writeFileSync('db/db.json', JSON.stringify(deleteNote));
         res.json(deleteNote);
 
     });
