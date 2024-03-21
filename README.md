@@ -8,6 +8,8 @@ The following image shows the web application's appearance. You can also go to t
 
 ![The Note Taker App .](./public/assets/images/initial-page-note-taker.png)
 ![The Note Taker App .](./public/assets/images/note-taker-list.png)
+[note-taker-video.webm](https://github.com/chelleyoungw/my-note-taker-using-express/assets/153236313/81bea330-0361-4927-9593-c2eb6834d73a)
+
 
 ## Installation
 Clone the project. Type in the following commands into your terminal:
